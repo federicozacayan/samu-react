@@ -10,14 +10,13 @@ import { TodoForm } from '../TodoForm';
 export function AppUI() {
     const {
         openModal,
-        setOpenModal,
         loading
     } = useContext(TodoContext);
     return <>
         <Header />
         <TodoImput />
         {loading?<Loading/>:<TodoList />}
-        <TodoAdd setOpenModal={setOpenModal} />
+        <TodoAdd />
         {
             openModal &&
             <Modal>
