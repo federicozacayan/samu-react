@@ -13,6 +13,7 @@ export function TodoList() {
     onDelete
   } = useContext(TodoContext);
 
+  if (searchedTodos.length === 0) return <div>Add the first task clicking <br/> the botton on the button!</div>
   return <ul className="list">
     {searchedTodos.map(item => (
       <TodoItem

@@ -1,5 +1,5 @@
 import './index.css';
-export function Header(){
+export function NavBar(){
     return <nav className="nav">
         <ul>
             <li>as</li>
