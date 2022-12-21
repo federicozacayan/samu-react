@@ -1,27 +1,23 @@
 import { NavBar } from '../NavBar';
-import { Modal } from '../Modal';
-import { TodoAdd } from '../TodoAdd';
-import { TodoImput } from '../TodoImput';
-import { Loading, TodoList } from '../TodoList';
-import { useContext } from "react";
-import { TodoContext } from '../TodoContext';
-import { TodoForm } from '../TodoForm';
+import { Route, Routes } from 'react-router-dom';
+import { Home } from '../../pages/Home';
+import { Todo } from '../../pages/Todo';
+import { Pepe } from '../../pages/Pepe';
+import { NotFound } from '../../pages/NotFound';
+
+
+
 
 export function AppUI() {
-    const {
-        openModal,
-        loading
-    } = useContext(TodoContext);
+
     return <>
         <NavBar />
-        <TodoImput />
-        {loading?<Loading/>:<TodoList />}
-        <TodoAdd />
-        {
-            openModal &&
-            <Modal>
-                <TodoForm />
-            </Modal>
-        }
+        <Routes>
+            <Route path='/' element={<Todo />}></Route>
+            <Route path='/home' element={<Home />}></Route>
+            <Route path='/pepe' element={<Pepe />}></Route>
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+
     </>
 }

@@ -1,10 +1,10 @@
-import { Modal } from '../Modal';
-import { TodoAdd } from '../TodoAdd';
-import { TodoImput } from '../TodoImput';
-import { Loading, TodoList } from '../TodoList';
-import { TodoForm } from '../TodoForm';
+import { Modal } from '../component/Modal';
+import { TodoAdd } from '../component/TodoAdd';
+import { TodoImput } from '../component/TodoImput';
+import { Loading, TodoList } from '../component/TodoList';
+import { TodoForm } from '../component/TodoForm';
 import { useContext } from "react";
-import { TodoContext } from '../TodoContext';
+import { TodoContext } from '../component/TodoContext';
 
 export const Todo = () => {
     const {
