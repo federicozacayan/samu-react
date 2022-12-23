@@ -72,7 +72,7 @@ function TodoProvider(props) {
     }
 
     return (
-        <TodoContext.Provider value={value}>
+        <TodoContext.Provider value={value}> 
             {props.children}
         </TodoContext.Provider>
     )
