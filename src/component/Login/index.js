@@ -1,13 +1,14 @@
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useAuth } from "../useAuth"
 
 export const Login = () => {
     const { login } = useAuth()
     const navigate = useNavigate()
+    const location = useLocation()
 
     const loginHandler = () => {
         login()
-        navigate('/home')
+        navigate(location.state.location)
     }
     return (
         <div>
