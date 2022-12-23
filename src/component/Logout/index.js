@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../useAuth"
 
-export const Login = () => {
-    const { login } = useAuth()
+export const Logout = () => {
+    const { logout } = useAuth()
     const navigate = useNavigate()
 
     const loginHandler = () => {
-        login()
+        logout()
         navigate('/home')
     }
     return (
         <div>
-            <button onClick={loginHandler}>Login</button>
+            <button onClick={loginHandler}>Logout</button>
         </div>
     )
 }
