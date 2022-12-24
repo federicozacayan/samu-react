@@ -4,11 +4,10 @@ import { useAuth } from "../useAuth"
 export const Login = () => {
     const { login } = useAuth()
     const navigate = useNavigate()
-    const location = useLocation()
-
+    const {state} = useLocation()
     const loginHandler = () => {
         login()
-        navigate(location.state.location)
+        navigate(state?.location?.pathname ?? '/')
     }
     return (
         <div>
