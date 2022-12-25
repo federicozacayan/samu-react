@@ -1,6 +1,6 @@
 import { useUser } from "../services/useUser"
 
-export const Home = () => {
+const Home = () => {
     const { loading, item } = useUser(5)
     console.log('1', `loading: ${loading}`);
     if (loading) return <div>Loading...</div>
@@ -8,3 +8,4 @@ export const Home = () => {
         <div>Name: {item.name} </div>
     )
 }
+export default Home
